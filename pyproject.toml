@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "projseed"
+version = "1.0.0"
+description = "Zero-dependency CLI that scaffolds the meta files every new repo needs: .gitignore, LICENSE, README, .editorconfig, CONTRIBUTING, CHANGELOG, issue/PR templates."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "gitstq" }]
+keywords = ["gitignore", "license", "scaffold", "boilerplate", "cli", "project-template"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[project.scripts]
+projseed = "projseed.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["projseed*"]
+exclude = ["tests*"]

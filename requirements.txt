@@ -1,0 +1,3 @@
+# projseed has zero runtime dependencies: it only uses the Python standard library.
+# This file is intentionally empty of pinned third-party packages.
+# Development tools (if any) are listed under an optional extra in pyproject.toml.
